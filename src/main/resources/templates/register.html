@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" xmlns="https://www.thymeleaf.org">
+	<title>Hostpital Management System</title>
+ <style>
+    body {
+ font-family: Arial, sans-serif;
+ background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvnMqQMv-PlhHnnBz6cOhOUrAaUQRmBqavLg&usqp=CAU);
+ background-repeat: no-repeat;
+ background-size: 100%;
+ 
+}
+
+form {
+ width: 300px;
+ margin: 0 auto;
+}
+
+label {
+ display: block;
+ margin-top: 10px;
+}
+
+input[type=text],
+select {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ box-sizing: border-box;
+}
+
+input[type=submit] {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+ cursor: pointer;
+}
+
+input[type=submit]:hover {
+ background-color: #45a049;
+}
+ </style>
+</head>
+<body>
+
+    
+      
+<h1  style="text-align: center;color: rgb(64, 0, 0);">🏥Hospital Registrtaion From💉🩺💊 </h1>
+    
+
+
+<form   th:action="@{/registerPatient}" th:object="${hospital}" method="post">
+  
+ <label for="id">PatientId:</label><br>
+ <input type="text" id="id" name="id"><br>  
+
+ <label for="name">PatientName:</label><br>
+ <input type="text" id="name" name="name"><br>
+  
+ <label for="address">PatientAddress:</label><br>
+ <input type="text" id="address" name="address"><br>
+  
+ <label for="contact">PatientContact:</label><br>
+ <input type="text" id="contact" name="contact"><br>
+  
+ <label for="email">PatientEmail:</label><br>
+ <input type="text" id="email" name="email"><br>
+  
+ <label for="type">PatientType:</label><br>
+ <select id="type" name="type">
+    <option value="private">Private</option>
+    <option value="public">Public</option>
+ </select><br>
+  
+ <input type="submit" value="Register">
+</form>
+
+</body>
+</html>
